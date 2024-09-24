@@ -28,28 +28,30 @@
       <div id="change-ava" style={`display: ${shown}`}>CHANGE</div>
     </div>
   </Row>
-  <Row style="height: 10%; margin-top: 10px" id="current-date">
-    <h2 class="fs-5 mt-2">{userData.name}</h2>
-  </Row>
-  <Row
-    style="height: 5% ; margin-top: 10px"
-    class="h-15 border-bottom-1"
-    id="welcome"
-  >
-    <Col xs="6" style="text-align: left">Due Date:</Col>
-    <Col style="text-align: right">{userData.dueDate}</Col>
-  </Row>
-  <Row style="height: 10% ; margin-top: 10px" class="h-15" id="welcome">
-    <Col xs="8" style="text-align: left">Current Week of Pregnancy:</Col>
-    <Col style="text-align: right">{userData.currentWeek}</Col>
-  </Row>
-  <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
-    <Col xs="8" style="text-align: left">Weight:</Col>
-    <Col style="text-align: right">{userData.weight}kg</Col>
-  </Row>
-  <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
-    <Col xs="8" style="text-align: left">Sugar Level:</Col>
-    <Col style="text-align: right">{userData.sugarLevel}</Col>
+  <Row>
+    <Row style="height: 10%; margin-top: 10px" id="current-date">
+      <h2 class="fs-5 mt-2">{userData.name}</h2>
+    </Row>
+    <Row
+      style="height: 5% ; margin-top: 10px"
+      class="h-15 border-bottom-1"
+      id="welcome"
+    >
+      <Col xs="6" style="text-align: left">Due Date:</Col>
+      <Col style="text-align: right">{userData.dueDate}</Col>
+    </Row>
+    <Row style="height: 10% ; margin-top: 10px" class="h-15" id="welcome">
+      <Col xs="8" style="text-align: left">Current Week of Pregnancy:</Col>
+      <Col style="text-align: right">{userData.currentWeek}</Col>
+    </Row>
+    <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
+      <Col xs="8" style="text-align: left">Weight:</Col>
+      <Col style="text-align: right">{userData.weight}kg</Col>
+    </Row>
+    <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
+      <Col xs="8" style="text-align: left">Sugar Level:</Col>
+      <Col style="text-align: right">{userData.sugarLevel}</Col>
+    </Row>
   </Row>
 </Container>
 
