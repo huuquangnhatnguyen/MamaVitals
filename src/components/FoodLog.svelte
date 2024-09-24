@@ -13,8 +13,8 @@
   <Row style="height: 32%">
     <Calendar />
   </Row>
-  <hr class="solid" />
-  <Row style="max-height: 60%; overflow-y: scroll">
+  <hr class="solid" style="margin-top: 10px;"/>
+  <Row style="max-height: 50%; overflow-y: scroll; style="margin-top: 10px;">
     {#each loggedMeals as meal}
       <Row style=" max-height: 25%; margin: 10px auto"
         ><Meals option={meal["option"]} /></Row
