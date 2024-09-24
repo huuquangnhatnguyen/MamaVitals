@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import generateCalendar, {
     listOfDishes,
     month,
@@ -7,7 +6,6 @@
     year,
   } from "../DummyData";
   import { loggedData, todayMeal } from "../store";
-  import { get } from "svelte/store";
   // generate today
   const currentDate = new Date();
   // generate all days for that month calendar
@@ -20,18 +18,14 @@
   loggedData.subscribe((meals) => (logged = meals));
   // show the data logged in that day
   let showData = (date) => {
-    console.log("changed", date);
     if (Object.hasOwn(logged, date)) {
       let allMeals = [];
-
       logged[date].forEach((element) => {
         allMeals.push(element);
       });
-
       for (let i in allMeals) {
         allMeals[i] = listOfDishes[allMeals[i]];
       }
-
       todayMeal.set(allMeals);
     }
   };
@@ -50,13 +44,38 @@
   <div class="days">
     {#each days as day}
       {#if day}
-        <div
+        {#if day.getDate() === currentDate.getDate()}
+          <div
+            class="current-selected"
+            on:click={showData(
+              `${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear()}`
+            )}
+          >
+            {day.getDate()}
+          </div>
+        {:else if Object.hasOwn(loggedDays, `${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear()}`)}
+          <div
+            class="logged-day"
+            on:click={showData(
+              `${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear()}`
+            )}
+          >
+            {day.getDate()}
+          </div>
+        {:else}
+          <div
+            class="day"
+            on:click={showData(
+              `${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear()}`
+            )}
+          >
+            {day.getDate()}
+          </div>
+        {/if}
+        <!-- <div
           class={day.getDate() === currentDate.getDate()
-            ? "current-day"
-            : Object.hasOwn(
-                  loggedDays,
-                  `${day.getDate()}/${day.getMonth() + 1}/${day.getFullYear()}`
-                )
+            ? "current-selected"
+            : 
               ? "logged-day"
               : "day"}
           on:click={showData(
@@ -64,7 +83,7 @@
           )}
         >
           {day.getDate()}
-        </div>
+        </div> -->
       {:else}
         <div class="day empty"></div>
       {/if}
@@ -108,13 +127,14 @@
     cursor: pointer;
   }
 
-  .current-day {
+  .current-selected {
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffbfca;
     border: 1px solid #ddd;
+    cursor: pointer;
   }
 
   .empty {

@@ -3,7 +3,6 @@
   import Chart from "chart.js/auto";
   import { onMount } from "svelte";
   import dates, { trackingData } from "../DummyData";
-
   function createTrendChart() {
     var ctx = document.getElementById("daily-track");
     let myChart = new Chart(ctx, {
@@ -29,6 +28,6 @@
       background-color: white;
   "
 >
-  <h4 class="heading">Daily tracking Chart</h4>
+  <h4 class="heading" style="margin: 50px auto">Daily tracking Chart</h4>
   <canvas id="daily-track" width="1000px" height="300px" />
 </Container>

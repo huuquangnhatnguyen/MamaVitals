@@ -68,8 +68,8 @@ datasets: [
     {
     label: "gram",
     data: [currentSugar, bloodSugar[1] - currentSugar],
-    backgroundColor: ["rgba(255, 26, 132, 0.2)", "rgba(0, 0, 0, 0.2)"],
-    borderColor: ["rgba(255, 26, 132, 0.2)", "rgba(0, 0, 0, 0.2)"],
+    backgroundColor: ["rgba(250, 143, 146, 0.8)", "rgba(0, 0, 0, 0.2)"],
+    borderColor: ["rgba(250, 143, 146, 0.8)", "rgba(0, 0, 0, 0.2)"],
     borderWidth: 1,
     cutout: "80%",
     circumference: 180,

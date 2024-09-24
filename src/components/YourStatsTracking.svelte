@@ -20,7 +20,7 @@
       <SugarLevelChart />
     </Col>
   </Row>
-  <Row class="h-50" style="padding: 12px">
+  <Row class="h-50" style="padding: 12px 12px 0 12px">
     <DailyTracking />
   </Row>
 </Container>

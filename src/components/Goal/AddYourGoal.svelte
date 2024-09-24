@@ -1,8 +1,15 @@
 <script>
-  import { Button, Container, Input, Modal } from "@sveltestrap/sveltestrap";
-  import CustomizeDish from "./CustomizeDish.svelte";
+  import {
+    Button,
+    Container,
+    FormGroup,
+    Input,
+    InputGroupText,
+    Modal,
+  } from "@sveltestrap/sveltestrap";
   import { dishes, listOfDishes } from "../DummyData";
   import { addToast, DishOptions, todayMeal } from "../store";
+  import goalSVG from "../../assets/goal.svg";
   const toggle = () => (open = !open);
   let open = false;
   const addNewDishButton = () => (addButton = !addButton);
@@ -10,34 +17,28 @@
   let meal;
   let selected = 0;
   todayMeal.subscribe((dish) => (meal = dish));
-  const addDish = () => {
-    todayMeal.update((OGlist) => {
-      OGlist.push(listOfDishes[selected]);
-      return OGlist;
-    });
+  const addGoal = () => {
     open = false;
     addToast();
   };
 </script>
 
-<div class="add-button" on:click={toggle}>+</div>
+<div class="add-button" style="padding: auto" on:click={toggle}>
+  <img src={goalSVG} alt="" />
+</div>
 <Modal isOpen={open} {toggle} class="dish">
   <Container>
-    <h2>What did you eat today?</h2>
-    <div>
-      <Input type="select" bind:value={selected} placeholder="choose your dish">
-        {#each dishes as dish, i (i)}
-          <option value={i}>{dish}</option>
-        {/each}
-      </Input>
-    </div>
-    <div id="button" on:click={addNewDishButton}>
-      <CustomizeDish />
-    </div>
+    <h2>Adjust your goal:</h2>
+    <FormGroup>
+      <InputGroupText>Days</InputGroupText>
+      <Input type="number" placeholder="Enter your goal of logging days"
+      ></Input>
+    </FormGroup>
+
     {#if addButton}
       <div>
-        <Button class="my-2" outline color="success" on:click={addDish}
-          >Add My dish</Button
+        <Button class="my-2" outline color="success" on:click={addGoal}
+          >Add My Goal</Button
         >
       </div>
     {/if}
@@ -47,7 +48,7 @@
 <style>
   .add-button {
     position: fixed;
-    bottom: 40px;
+    bottom: 160px;
     right: 40px;
     width: 80px;
     height: 80px;
