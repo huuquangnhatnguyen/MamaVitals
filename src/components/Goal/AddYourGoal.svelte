@@ -26,8 +26,8 @@
 <div class="add-button" style="padding: auto" on:click={toggle}>
   <img src={goalSVG} alt="" />
 </div>
-<Modal isOpen={open} {toggle} class="dish">
-  <Container>
+<Modal isOpen={open} {toggle}>
+  <Container xxl style={"min-height: 50vh;"}>
     <h2>Adjust your goal:</h2>
     <FormGroup>
       <InputGroupText>Days</InputGroupText>

@@ -5,8 +5,8 @@
   import AddYourGoal from "./Goal/AddYourGoal.svelte";
 </script>
 
-<Container fluid style="height: 100%">
-  <Row style="height: 50%">
+<Container fluid style="height: 100% ; ">
+  <Row style="height: 50%,">
     <!-- <Calendar /> -->
     <h1 class="mt-2 mb-5">Your Goals</h1>
     <PieChart />
