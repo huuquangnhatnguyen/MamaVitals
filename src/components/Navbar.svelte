@@ -20,31 +20,22 @@
   }
 </script>
 
-<Navbar color="danger-subtle" light expand="fluid" container="fluid">
+<Navbar
+  light
+  expand="fluid"
+  container="fluid"
+  style="
+  background-color: white;
+  border: solid 1px #d0d4d4;
+  
+"
+>
   <NavbarBrand href="/">
-    <h1>MamaVitals</h1>
+    <h1 style="color:  #fb6f92;">MamaVita</h1>
   </NavbarBrand>
-  <NavbarToggler on:click={() => (isOpen = !isOpen)} />
-  <Collapse {isOpen} navbar on:update={handleUpdate}>
-    <Nav class="ms-auto" navbar>
-      <NavItem>
-        <NavLink href="#components/"><h3>Log your food</h3></NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink href="/"><h3>Overview</h3></NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink href="/"><h3>Set your goal</h3></NavLink>
-      </NavItem>
-      <!-- <Dropdown nav inNavbar>
-        <DropdownToggle nav caret>Options</DropdownToggle>
-        <DropdownMenu end>
-          <DropdownItem>Option 1</DropdownItem>
-          <DropdownItem>Option 2</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Reset</DropdownItem>
-        </DropdownMenu>
-      </Dropdown> -->
-    </Nav>
-  </Collapse>
+  <Nav class="ms-auto">
+    <!-- <NavItem>
+      <NavLink href="#components/"><h3>something here</h3></NavLink>
+    </NavItem> -->
+  </Nav>
 </Navbar>

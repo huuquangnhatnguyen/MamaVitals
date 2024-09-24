@@ -6,6 +6,7 @@
     Form,
     FormGroup,
     Input,
+    InputGroupText,
   } from "@sveltestrap/sveltestrap";
   let isOpen = false;
 </script>
@@ -29,11 +30,21 @@
       </Input>
     </FormGroup>
 
-    <!-- <FormGroup floating>
-      <Input placeholder="Enter a value" />
-      <div slot="label">
-        Floating Label Slot <Badge>3</Badge>
-      </div>
-    </FormGroup> -->
-  </Form></Collapse
->
+    <FormGroup floating label="Select your carb source">
+      <Input type="select" placeholder="Enter a value">
+        <option />
+        <option value="chicken">Noodle</option>
+        <option value="beef">Pasta</option>
+        <option value="pork">Rice</option>
+      </Input>
+    </FormGroup>
+
+    <FormGroup floating label="How much sugar is added? (g)">
+      <Input type="number" placeholder="Enter a value"></Input>
+    </FormGroup>
+
+    <FormGroup floating label="How many serving(s) do you have?">
+      <Input type="number" placeholder="Enter a value"></Input>
+    </FormGroup>
+  </Form>
+</Collapse>

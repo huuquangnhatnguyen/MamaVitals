@@ -16,12 +16,8 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "@sveltestrap/sveltestrap": "^6.2.7"
-  },
-  "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "npx gh-pages -d dist"
-}
+    "@sveltestrap/sveltestrap": "^6.2.7",
+    "chart.js": "^4.4.4",
+    "svelte-chartjs": "^3.1.5"
+  }
 }
