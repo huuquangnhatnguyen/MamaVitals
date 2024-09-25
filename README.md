@@ -1,6 +1,6 @@
 # Pregnancy Meal Tracker
 
-**Pregnancy Meal Tracker** is a mobile app designed to help expecting mothers monitor and manage their nutrition during pregnancy, with a special focus on controlling blood sugar levels. The app provides tailored meal recommendations, tracks nutrient intake, and offers insights into maintaining a healthy pregnancy.
+**Pregnancy Meal Tracker** is a web app designed to help expecting mothers monitor and manage their nutrition during pregnancy, with a special focus on controlling blood sugar levels. The app provides tailored meal recommendations, tracks nutrient intake, and offers insights into maintaining a healthy pregnancy.
 
 ## Key Features
 
