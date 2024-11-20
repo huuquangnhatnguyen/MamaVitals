@@ -6,8 +6,7 @@
   let shown = "none";
 </script>
 
-<Container
-  xxl
+<div
   class="h-100 p-3 bg-white"
   style="
     max-width: 100%;
@@ -28,8 +27,13 @@
       <div id="change-ava" style={`display: ${shown}`}>CHANGE</div>
     </div>
   </Row>
-  <Row>
-    <Row style="height: 10%; margin-top: 10px" id="current-date">
+  <Row
+    style="height: 65%; margin-top: 20px; justify-content: center; text-align: center;"
+  >
+    <Row
+      style="height: 10%; margin-top: 10px; width:100%; justify-content:center"
+      id="current-date"
+    >
       <h2 class="fs-5 mt-2">{userData.name}</h2>
     </Row>
     <Row
@@ -37,23 +41,36 @@
       class="h-15 border-bottom-1"
       id="welcome"
     >
-      <Col xs="6" style="text-align: left">Due Date:</Col>
-      <Col style="text-align: right">{userData.dueDate}</Col>
+      <Col xs="7" style="text-align: left; font-weight: bold; padding: 0"
+        >Due Date:</Col
+      >
+      <Col xs="5" style="text-align: right; padding: 0;">{userData.dueDate}</Col
+      >
     </Row>
     <Row style="height: 10% ; margin-top: 10px" class="h-15" id="welcome">
-      <Col xs="8" style="text-align: left">Current Week of Pregnancy:</Col>
-      <Col style="text-align: right">{userData.currentWeek}</Col>
+      <Col xs="8" style="text-align: left; font-weight: bold; padding: 0"
+        >Current Week of Pregnancy:</Col
+      >
+      <Col xs="4" style="text-align: right; align-items: center; padding: 0;"
+        >{userData.currentWeek}</Col
+      >
     </Row>
     <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
-      <Col xs="8" style="text-align: left">Weight:</Col>
-      <Col style="text-align: right">{userData.weight}kg</Col>
+      <Col xs="8" style="text-align: left; font-weight: bold; padding: 0"
+        >Weight:</Col
+      >
+      <Col style="text-align: right; padding: 0;">{userData.weight}kg</Col>
     </Row>
     <Row style="height: 5% ; margin-top: 10px" class="h-15" id="welcome">
-      <Col xs="8" style="text-align: left">Sugar Level:</Col>
-      <Col style="text-align: right">{userData.sugarLevel}</Col>
+      <Col xs="8" style="text-align: left; font-weight: bold; padding: 0"
+        >Sugar Level:</Col
+      >
+      <Col xs="4" style="text-align: right; padding: 0;"
+        >{userData.sugarLevel}</Col
+      >
     </Row>
   </Row>
-</Container>
+</div>
 
 <style>
   .user-img {

@@ -7,11 +7,11 @@ export const todayMeal = writable([])
 todayMeal.set([listOfDishes[0]]);
 
 export let loggedData = writable({
-    '24/9/2024':[0,1],
-    '20/9/2024':[1,1],
-    '21/9/2024':[0,2],
-    '22/9/2024':[2,1],
-    '23/9/2024':[1,2],
+    '18/11/2024':[0,1],
+    '19/11/2024':[1,1],
+    '20/11/2024':[0,2],
+    '21/11/2024':[2,1],
+    '22/11/2024':[1,2],
   })
   
   // check if the object contain that keyword or not 

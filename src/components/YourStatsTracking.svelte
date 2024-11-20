@@ -6,8 +6,8 @@
   import SugarLevelChart from "./YourStatsTracking/SugarLevelChart.svelte";
 </script>
 
-<Container xxl class="h-100" style="margin: 0px auto; ">
-  <Row class="h-50 rows">
+<div class="h-100" style="margin: 0px auto; ">
+  <Row class="h-40 rows">
     <Col xs="3">
       <PersonalProfile />
     </Col>
@@ -20,10 +20,10 @@
       <SugarLevelChart />
     </Col>
   </Row>
-  <Row class="h-50" style="padding: 12px 12px 0 12px">
+  <Row class="h-40" style="padding: 12px 12px 0 12px">
     <DailyTracking />
   </Row>
-</Container>
+</div>
 
 <style>
 </style>

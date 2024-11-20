@@ -23,7 +23,7 @@
 </main>
 
 <style>
-  div {
+  #container {
     width: 100vw;
     height: 90vh;
     margin: 10px auto;
@@ -32,10 +32,13 @@
   }
   #stats {
     width: 55%;
+    height: 100%;
+    margin-right: 10px;
   }
   #food-log {
     padding: 10px;
     width: 20%;
+    height: 100%;
     background-color: white;
     border: solid 1px #d0d4d4;
     border-radius: 10px;
@@ -43,6 +46,7 @@
   #goals {
     height: 50%;
     padding: 10px;
+    height: 100%;
     width: 20%;
     background-color: white;
     border: solid 1px #d0d4d4;

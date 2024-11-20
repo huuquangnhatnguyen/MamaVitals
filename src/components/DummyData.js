@@ -40,7 +40,7 @@ function generateCalendar(year, month) {
 }
 
 
-export const dates = ["9/10", "9/15", "9/21", "9/22", "9/23"];
+export const dates = ["11/18", "11/19", "11/20", "11/21", "11/22"];
 //further implement here is just mocking data for chart
 export let nutrientData = [120, 80, 50, 75, 100];
 //daily tracking data

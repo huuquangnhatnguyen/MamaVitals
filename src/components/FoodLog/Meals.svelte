@@ -10,6 +10,7 @@
   style="
 border: solid 1px #d0d4d4; 
 border-radius: 20px;
+margin-bottom: 10px;
 "
 >
   <Row style="height: 5%, margin-bottom: 10px"

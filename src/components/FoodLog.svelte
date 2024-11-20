@@ -9,23 +9,37 @@
   todayMeal.subscribe((meals) => (loggedMeals = meals));
 </script>
 
-<Container fluid style="height: 100%; margin-bottom: 10px">
-  <Row style="height: 32%">
+<div class="container">
+  <div class="calendar-container">
     <Calendar />
-  </Row>
+  </div>
   <hr class="solid" />
-  <Row style="max-height: 50%; overflow-y: scroll; margin-top: 10px">
+  <div class="all-dishes">
     {#each loggedMeals as meal}
-      <Row style=" max-height: 25%; margin: 10px auto"
-        ><Meals option={meal["option"]} /></Row
-      >
+      <Meals option={meal["option"]} />
     {/each}
-  </Row>
+  </div>
   <AddYourDish />
-</Container>
+</div>
 
 <style>
+  .container {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0 10px;
+  }
+  .calendar-container {
+    height: fit-content;
+    margin-bottom: 10px;
+  }
   hr.solid {
     border-top: 3px solid #bbb;
+  }
+  .all-dishes {
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
   }
 </style>
